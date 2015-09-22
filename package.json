@@ -1,0 +1,14 @@
+{
+  "name": "@hypers/gitbook-ext",
+  "version": "0.0.4",
+  "description": "gitbook extend",
+  "main": "./index.js",
+  "devDependencies": {
+    "commander": "^2.8.1",
+    "fs": "0.0.2",
+    "less": "^2.5.1",
+    "less-middleware": "^2.0.1",
+    "path": "^0.12.7",
+    "user-home": "^2.0.0"
+  }
+}
