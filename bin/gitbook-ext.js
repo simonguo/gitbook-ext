@@ -9,6 +9,9 @@ var program = require('commander');
 
 var CONFIG_ROOT = path.resolve(userHome, ".gitbook");
 var VERSIONS_ROOT = path.resolve(CONFIG_ROOT, "versions");
+var WORKSPACE_ROOT = process.mainModule.filename.split("gitbook-ext")[0] + "gitbook-ext/";
+
+var pak = require("../package.json");
 
 
 function getVersions(path, callback) {
@@ -92,11 +95,21 @@ function exists(src, dst, callback) {
 
 function lessToCss(src, dist) {
 
-    fs.readFile(src, "utf-8", function(err, data) {
+    fs.readFile(src, "utf-8", function(e, data) {
+
+        if (e) {
+            console.log(e);
+            return;
+        }
+
         less.render(data, function(e, css) {
 
             if (e) {
                 console.log(e);
+                return;
+            }
+            if (!css) {
+                console.log("css is null");
                 return;
             }
 
@@ -113,22 +126,21 @@ function lessToCss(src, dist) {
 
 function run(theme) {
 
-    lessToCss("./" + theme + "/stylesheets/website.less", "./" + theme + "/assets/style.css");
+    //lessToCss(WORKSPACE_ROOT + theme + "/stylesheets/website.less", WORKSPACE_ROOT + theme + "/assets/style.css");
     getVersions(VERSIONS_ROOT, function(path) {
         console.log(path);
         // 复制目录
-        exists('./' + theme, path + "/theme", copy);
+        exists(WORKSPACE_ROOT + theme, path + "/theme", copy);
     });
 }
 
 program
-    .version('0.0.1')
+    .version(pak.version)
     .option('-d, --default', 'default template')
     .option('-p, --pagurian', 'pagurian template')
     .parse(process.argv);
 
 if (program.default) {
-
     run("theme-default");
     console.log("theme-default");
 }

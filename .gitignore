@@ -1,0 +1,4 @@
+glob:*.orig
+glob:*.swp
+
+node_modules/*

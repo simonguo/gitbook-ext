@@ -15,14 +15,13 @@ $ npm install gitbook-cli -g
 **安装Gitbook-Ext**
 
 ```
-npm install @hypers/gitbook-ext --registry=http://54.223.240.36:7001
+npm install -g @hypers/gitbook-ext --registry=http://54.223.240.36:7001
 ```
 
 **查看帮助**
 
 ```
-cd gitbook-ext
-node index.js -h
+gitbook-ext -h
 ```
 
 会列出以下信息
@@ -36,11 +35,47 @@ Usage: index [options]
    -V, --version   output the version number
    -d, --default   default template
    -p, --pagurian  pagurian template
-```
-
-**使用pagurian模板**
 
 ```
-cd gitbook-ext
-node index.js -p
+
+**使用模板**
+
+当你想使用gitbook-ext扩展的模板执行以下命令
+```
+gitbook-ext -p
+```
+
+同时在你的gitbook目录下新增一个book.json 文件
+```
+├── _book
+├── book.json
+├── README.md
+└── SUMMARY.md
+```
+
+book.json 这个文件可以配置模板参数
+```json
+{
+    "variables": {
+        "title":"帮助文档",
+        "theme":"theme-green",
+        "copyright":"Copyright 2015 HYPERS"
+    }
+}
+```
+- title: 配置文档标题，显示在页面顶部
+- theme: 模板颜色,当前支持:theme-green,theme-purple,theme-orange
+- copyright: 配置版权信息，显示在页面底部
+
+
+当配置完成以后，执行以下命令，就默认生成了一个_book文件
+```
+gitbook build
+```
+
+如果你想切换到默认的模板，执行以下命令
+
+```
+gitbook-ext -d
+gitbook build
 ```
