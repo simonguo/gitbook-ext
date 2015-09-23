@@ -3,6 +3,8 @@ GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Ma
 
 GitBook 提供的模板不够丰富，Gitbook-Ext是对GitBook的扩展，并提供一些更丰富的模板。
 
+ ![image](https://github.com/simonguo/gitbook-ext/blob/master/demo.png)
+
 ## 快速开始
 **安装GitBook**
 
@@ -47,7 +49,6 @@ gitbook-ext -p
 
 同时在你的gitbook目录下新增一个book.json 文件
 ```
-├── _book
 ├── book.json
 ├── README.md
 └── SUMMARY.md

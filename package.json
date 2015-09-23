@@ -1,24 +1,28 @@
 {
-    "name": "@hypers/gitbook-ext",
-    "version": "0.0.10",
-    "description": "gitbook extend",
-    "main": "./bin/gitbook-ext.js",
-    "author": {
-        "name": "simonguo",
-        "url": "http://www.guoxiaoming.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/simonguo/gitbook-ext.git"
-    },
-    "bin": {
-        "gitbook-ext": "./bin/gitbook-ext.js"
-    },
-    "dependencies": {
-        "commander": "^2.8.1",
-        "fs": "0.0.2",
-        "less": "^2.5.1",
-        "path": "^0.12.7",
-        "user-home": "^2.0.0"
-    }
+  "name": "@hypers/gitbook-ext",
+  "version": "0.1.0",
+  "description": "gitbook extend",
+  "main": "./bin/gitbook-ext.js",
+  "author": {
+    "name": "Simon Guo",
+    "email":"simonguo.2009@gmail.com",
+    "url": "http://www.guoxiaoming.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonguo/gitbook-ext.git"
+  },
+  "bin": {
+    "gitbook-ext": "./bin/gitbook-ext.js"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "fs": "0.0.2",
+    "path": "^0.12.7",
+    "user-home": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2"
+  }
 }

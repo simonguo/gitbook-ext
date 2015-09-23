@@ -3989,27 +3989,6 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 body {
   font-family: "Microsoft YaHei", "Hiragino Sans GB", "STXihei", "Open Sans", sans-serif;
 }
-.theme-green .header {
-  background: #1b9451;
-}
-.theme-green .book .book-summary ul.summary li.active > a,
-.theme-green .book .book-summary ul.summary li a:hover {
-  color: #1b9451;
-}
-.theme-purple .header {
-  background: #906;
-}
-.theme-purple .book .book-summary ul.summary li.active > a,
-.theme-purple .book .book-summary ul.summary li a:hover {
-  color: #906;
-}
-.theme-purple .header {
-  background: #ffad33;
-}
-.theme-purple .book .book-summary ul.summary li.active > a,
-.theme-purple .book .book-summary ul.summary li a:hover {
-  color: #ffad33;
-}
 .header {
   color: #fff;
   height: 50px;
@@ -4050,6 +4029,27 @@ body {
 }
 .book .book-body .navigation {
   display: none;
+}
+.theme-green .header {
+  background: #1b9451;
+}
+.theme-green .book .book-summary ul.summary li.active > a,
+.theme-green .book .book-summary ul.summary li a:hover {
+  color: #1b9451;
+}
+.theme-purple .header {
+  background: #906;
+}
+.theme-purple .book .book-summary ul.summary li.active > a,
+.theme-purple .book .book-summary ul.summary li a:hover {
+  color: #906;
+}
+.theme-orange .header {
+  background: #ffad33;
+}
+.theme-orange .book .book-summary ul.summary li.active > a,
+.theme-orange .book .book-summary ul.summary li a:hover {
+  color: #ffad33;
 }
 .gitbook-link,
 .divider {
