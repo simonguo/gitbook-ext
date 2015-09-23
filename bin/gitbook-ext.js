@@ -4,7 +4,6 @@
 var path = require("path");
 var userHome = require("user-home");
 var fs = require('fs');
-var less = require('less');
 var program = require('commander');
 
 var CONFIG_ROOT = path.resolve(userHome, ".gitbook");
@@ -93,40 +92,8 @@ function exists(src, dst, callback) {
 }
 
 
-function lessToCss(src, dist) {
-
-    fs.readFile(src, "utf-8", function(e, data) {
-
-        if (e) {
-            console.log(e);
-            return;
-        }
-
-        less.render(data, function(e, css) {
-
-            if (e) {
-                console.log(e);
-                return;
-            }
-            if (!css) {
-                console.log("css is null");
-                return;
-            }
-
-            fs.writeFile(dist, css.css, function(e, data) {
-                if (e) {
-                    console.log(e);
-                }
-                console.log("less to css success");
-            });
-        });
-    });
-}
-
-
 function run(theme) {
 
-    //lessToCss(WORKSPACE_ROOT + theme + "/stylesheets/website.less", WORKSPACE_ROOT + theme + "/assets/style.css");
     getVersions(VERSIONS_ROOT, function(path) {
         console.log(path);
         // 复制目录
