@@ -19,7 +19,6 @@ function getVersions(path, callback) {
             console.log('read dir error');
             return;
         }
-
         files.forEach(function(item) {
             var tmpPath = path + '/' + item;
             fs.stat(tmpPath, function(err1, stats) {
@@ -77,6 +76,8 @@ function copy(src, dst) {
     });
 }
 
+
+
 // 在复制目录前需要判断该目录是否存在，不存在需要先创建目录
 function exists(src, dst, callback) {
     fs.exists(dst, function(exists) {
@@ -91,9 +92,9 @@ function exists(src, dst, callback) {
     });
 }
 
-
-function run(theme) {
-
+//改变模板
+function onChange(theme) {
+    console.log(theme);
     getVersions(VERSIONS_ROOT, function(path) {
         console.log(path);
         // 复制目录
@@ -101,18 +102,60 @@ function run(theme) {
     });
 }
 
+
+function writeFile(path, data, callback) {
+    console.log(path);
+    fs.exists(path, function(exists) {
+
+        if (!exists) {
+            fs.writeFile(path, data, {
+                flag: 'a'
+            }, function(err) {
+                if (err) {
+                    console.error(err);
+                    return;
+                }
+                if (typeof callback === 'function') {
+                    callback();
+                    console.log("create [" + path + "] success");
+                }
+
+            });
+        }
+    });
+}
+
+function initialize() {
+    var path = process.cwd();
+    writeFile(path + '/README.md', "# Introduction");
+    writeFile(path + '/SUMMARY.md', "# Summary");
+    writeFile(path + '/book.json', '{\n' +
+        '\t"variables": {\n' +
+        '\t\t"title": "说明文档",\n' +
+        '\t\t"theme": "theme-orange",\n' +
+        '\t\t"copyright": "Copyright 2015 gitbook-ext"\n' +
+        '\t}\n' +
+        '}');
+
+    console.log("initialize finish");
+}
+
+
 program
     .version(pak.version)
     .option('-d, --default', 'default template')
     .option('-p, --pagurian', 'pagurian template')
+    .option('-i, --initialize', 'initialize book')
     .parse(process.argv);
 
 if (program.default) {
-    run("theme-default");
-    console.log("theme-default");
+    onChange("theme-default");
 }
 
 if (program.pagurian) {
-    run("theme-pagurian");
-    console.log("theme-pagurian");
+    onChange("theme-pagurian");
+}
+
+if (program.initialize) {
+    initialize();
 }
