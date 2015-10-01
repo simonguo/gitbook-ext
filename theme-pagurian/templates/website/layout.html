@@ -44,20 +44,4 @@
 {{ htmlSnippet("html:end")|default("", true)|safe }}
 
 
-{% if options.collapsible_menu == true %}
-<script type="text/javascript">
-    $(".chapter.active").parents(".chapter").addClass("active");
-    $(".chapter.active").parents(".chapter").find(".btn-open").removeClass("fa-chevron-right").addClass("fa-chevron-down");
-    $(".chapter>span").click(function() {
-        if ($(this).find(".btn-open").hasClass("fa-chevron-right")) {
-            $(this).parents(".chapter").addClass("active");
-            $(this).find(".btn-open").removeClass("fa-chevron-right").addClass("fa-chevron-down");
-        } else {
-            $(this).parents(".chapter").removeClass("active");
-            $(this).find(".btn-open").removeClass("fa-chevron-down").addClass("fa-chevron-right");
-        }
-    });
-</script>
-{% endif %}
-
 </html>

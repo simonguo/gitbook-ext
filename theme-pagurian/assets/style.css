@@ -2771,6 +2771,14 @@ table {
   font-size: 9px;
   color: #33cc33;
 }
+.book .book-summary ul.summary li i.fa-spinner {
+  display: none;
+  position: absolute;
+  right: 9px;
+  top: 16px;
+  font-size: 12px;
+  display: inline;
+}
 .book .book-summary ul.summary li.done > a {
   color: #364149;
   font-weight: normal;
