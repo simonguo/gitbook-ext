@@ -1,28 +1,33 @@
 {
-  "name": "gitbook-ext",
-  "version": "0.1.7",
-  "description": "gitbook extend",
-  "main": "./bin/gitbook-ext.js",
-  "author": {
-    "name": "Simon Guo",
-    "email":"simonguo.2009@gmail.com",
-    "url": "http://www.guoxiaoming.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simonguo/gitbook-ext.git"
-  },
-  "bin": {
-    "gitbook-ext": "./bin/gitbook-ext.js"
-  },
-  "dependencies": {
-    "commander": "^2.8.1",
-    "fs": "0.0.2",
-    "path": "^0.12.7",
-    "user-home": "^2.0.0"
-  },
-  "devDependencies": {
-    "gulp-less": "^3.0.3",
-    "gulp-rename": "^1.2.2"
-  }
+    "name": "gitbook-ext",
+    "version": "0.1.8",
+    "description": "gitbook extend",
+    "main": "./bin/gitbook-ext.js",
+    "author": {
+        "name": "Simon Guo",
+        "email": "simonguo.2009@gmail.com",
+        "url": "http://www.guoxiaoming.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/simonguo/gitbook-ext.git"
+    },
+    "keywords": "gitbook,book,docs,git,gitbook-ext",
+    "bin": {
+        "gitbook-ext": "./bin/gitbook-ext.js"
+    },
+    "bugs": {
+        "url": "https://github.com/simonguo/f2edocs.com/issues",
+        "email": "simonguo.2009@gmail.com"
+    },
+    "dependencies": {
+        "commander": "^2.8.1",
+        "fs": "0.0.2",
+        "path": "^0.12.7",
+        "user-home": "^2.0.0"
+    },
+    "devDependencies": {
+        "gulp-less": "^3.0.3",
+        "gulp-rename": "^1.2.2"
+    }
 }

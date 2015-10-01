@@ -1,26 +1,48 @@
 {% macro articles(_articles) %}
     {% for item in _articles %}
         <li class="chapter {% if item.path == _input %}active{% endif %}" data-level="{{ item.level }}" {% if item.path and not item.external %}data-path="{{ item.path|contentLink }}"{% endif %}>
+
+
+
             {% if item.path and item.exists %}
                 {% if not item.external %}
                     <a href="{{ basePath }}/{{ item.path|contentLink }}">
+
+                        {% if options.collapsible_menu == true %}
+                            {% if item.articles.length > 0 %}<i class="fa fa-chevron-right btn-open"></i>{% endif %}
+                        {% endif %}
+
                         <i class="fa fa-check"></i>
                         {% if item.level != "0" %}
-                            <b>{{ item.level }}.</b>
+                            {% if options.level_number != false %}<b>{{ item.level }}.</b>{% endif %}
                         {% endif %}
                         {{ item.title }}
                     </a>
                 {% else %}
                     <a target="_blank" href="{{ item.path }}">
+
+                        {% if options.collapsible_menu == true %}
+                            {% if item.articles.length > 0 %}<i class="fa fa-chevron-right btn-open"></i>{% endif %}
+                        {% endif %}
+
                         <i class="fa fa-check"></i>
                         {% if item.level != "0" %}
-                            <b>{{ item.level }}.</b>
+                            {% if options.level_number != false %}<b>{{ item.level }}.</b>{% endif %}
+
                         {% endif %}
                         {{ item.title }}
                     </a>
                 {% endif %}
             {% else %}
-            <span><b>{{ item.level }}.</b> {{ item.title }}</span>
+            <span>
+
+                {% if options.collapsible_menu == true %}
+                    {% if item.articles.length > 0 %}<i class="fa fa-chevron-right btn-open"></i>{% endif %}
+                {% endif %}
+
+                {% if options.level_number != false %}<b>{{ item.level }}.</b>{% endif %}
+                {{ item.title }}
+            </span>
             {% endif %}
             {% if item.articles.length > 0 %}
             <ul class="articles">
