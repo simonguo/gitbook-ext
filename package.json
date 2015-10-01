@@ -1,6 +1,6 @@
 {
     "name": "gitbook-ext",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "gitbook extend",
     "main": "./bin/gitbook-ext.js",
     "author": {

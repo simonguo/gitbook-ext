@@ -129,14 +129,27 @@ function initialize() {
     var path = process.cwd();
     writeFile(path + '/README.md', "# Introduction");
     writeFile(path + '/SUMMARY.md', "# Summary");
-    writeFile(path + '/book.json', '{\n' +
+    writeFile(path + '/book.json',
+        '{\n' +
         '\t"variables": {\n' +
-        '\t\t"title": "说明文档",\n' +
-        '\t\t"theme": "theme-orange",\n' +
-        '\t\t"copyright": "Copyright 2015 gitbook-ext"\n' +
+        '\t\t"title": "前端工程师文档",\n' +
+        '\t\t"theme": "theme-gray",\n' +
+        '\t\t"copyright": "Copyright 2015 f2edocs.com"\n' +
+        '\t},\n' +
+        '\t"collapsible_menu":true,\n' +
+        '\t"level_number":false,\n' +
+        '\t"links": {\n' +
+        '\t\t"gitbook": false,\n' +
+        '\t\t"sharing": {\n' +
+        '\t\t\t"all":false,\n' +
+        '\t\t\t"vk": false,\n' +
+        '\t\t\t"facebook": true,\n' +
+        '\t\t\t"twitter": true,\n' +
+        '\t\t\t"google": true,\n' +
+        '\t\t\t"weibo": true\n' +
+        '\t\t}\n' +
         '\t}\n' +
         '}');
-
     console.log("initialize finish");
 }
 

@@ -68,16 +68,34 @@ book.json 这个文件可以配置模板参数
 ```json
 {
     "variables": {
-        "title":"帮助文档",
-        "theme":"theme-green",
-        "copyright":"Copyright 2015 HYPERS"
+        "title": "前端工程师文档",
+        "theme": "theme-gray",
+        "copyright": "Copyright 2015 f2edocs.com"
+    },
+    "collapsible_menu":true,
+    "level_number":false,
+    "links": {
+        "gitbook": false,
+        "sharing": {
+            "all":false,
+            "vk": false,
+            "facebook": true,
+            "twitter": true,
+            "google": true,
+            "weibo": true
+        }
+
     }
 }
 ```
 
-- title: 配置文档标题，显示在页面顶部
-- theme: 模板颜色,当前支持:theme-green,theme-purple,theme-orange
-- copyright: 配置版权信息，显示在页面底部
+- variables-title: 配置文档标题，显示在页面顶部;
+- variables-theme: 模板颜色,当前支持:theme-green,theme-purple,theme-orange;
+- variables-copyright: 配置版权信息，显示在页面底部;
+- collapsible_menu: 使用折叠菜单;
+- level_number: 使用菜单结构序号;
+- links: 开启一些连接.
+
 
 切换你需要使用的模板 比如使用pagurian模板
 
