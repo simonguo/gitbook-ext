@@ -6,7 +6,7 @@
     {{ htmlSnippet("head:start")|default("", true)|safe }}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{% block title %}{% endblock %}</title>
+    <title>{{ options.variables.title }}-{% block title %}{% endblock %}</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="generator" content="GitBook {{ gitbook.version }}"> {% if options.author %}
@@ -31,7 +31,11 @@
 </head>
 
 <body class="{{ options.variables.theme }}">
-    <div class="header"><a class="logo">{{ options.variables.title }}</a>
+    <div class="header">
+        <a aria-label="Table of Contents" class="btn-toggle-summary" href="#">
+            <i class="fa fa-align-justify"></i>
+        </a>
+        <a class="logo">{{ options.variables.title }}</a>
         <ul class="nav">
             {% for item in options.variables.nav %}
             <li {% if item.active %} class="active" {%endif%}><a href="{{ item.url }}">{{ item.title }}</a></li>
@@ -40,6 +44,11 @@
     </div>
     {{ htmlSnippet("body:start")|default("", true)|safe }} {% block content %}{% endblock %} {% block javascript %}{% endblock %} {{ htmlSnippet("body:end")|default("", true)|safe }}
     <div class="footer">{{ options.variables.copyright }} </div>
+    {% if options.cnzz_tracker != null  %}
+    <div style="display:none" id="cnzz_tracker">
+        <script src="http://s9.cnzz.com/stat.php?id={{ options.cnzz_tracker.siteid }}&web_id={{ options.cnzz_tracker.siteid }}" language="JavaScript"></script>
+    </div>
+    {% endif %}
 </body>
 {{ htmlSnippet("html:end")|default("", true)|safe }}
 

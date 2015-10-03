@@ -2,14 +2,16 @@
     {% for item in _articles %}
         <li class="chapter {% if item.path == _input %}active{% endif %}" data-level="{{ item.level }}" {% if item.path and not item.external %}data-path="{{ item.path|contentLink }}"{% endif %}>
 
-
-
             {% if item.path and item.exists %}
                 {% if not item.external %}
                     <a href="{{ basePath }}/{{ item.path|contentLink }}">
 
                         {% if options.collapsible_menu == true %}
-                            {% if item.articles.length > 0 %}<i class="fa fa-chevron-right btn-open"></i>{% endif %}
+                            {% if item.articles.length > 0 %}
+                                <i class="fa fa-folder-o btn-open"></i>
+                            {% else %}
+                                <i class="fa fa-file-text-o"></i>
+                            {% endif %}
                         {% endif %}
 
                         <i class="fa fa-check"></i>
@@ -22,7 +24,7 @@
                     <a target="_blank" href="{{ item.path }}">
 
                         {% if options.collapsible_menu == true %}
-                            {% if item.articles.length > 0 %}<i class="fa fa-chevron-right btn-open"></i>{% endif %}
+                            {% if item.articles.length > 0 %}<i class="fa fa-folder-o btn-open"></i>{% endif %}
                         {% endif %}
 
                         <i class="fa fa-check"></i>
@@ -37,7 +39,7 @@
             <span>
 
                 {% if options.collapsible_menu == true %}
-                    {% if item.articles.length > 0 %}<i class="fa fa-chevron-right btn-open"></i>{% endif %}
+                    {% if item.articles.length > 0 %}<i class="fa fa-folder-o btn-open"></i>{% endif %}
                 {% endif %}
 
                 {% if options.level_number != false %}<b>{{ item.level }}.</b>{% endif %}

@@ -9,7 +9,14 @@ GitBook 提供的的默认样式可能不能满足您的视觉需求，Gitbook-E
 - 提供是否生成菜单序号配置;
 - 提供标题与版权信息设置。
 
-![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo.png)
+
+电脑上的效果
+
+![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-pc.png)
+
+手机上的效果
+
+![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-m.png)
 
 ## 快速开始
 **安装GitBook**
@@ -95,7 +102,6 @@ book.json 这个文件可以配置模板参数
 - collapsible_menu: 使用折叠菜单;
 - level_number: 使用菜单结构序号;
 - links: 开启一些连接.
-
 
 切换你需要使用的模板 比如使用pagurian模板
 
