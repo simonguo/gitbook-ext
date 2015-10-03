@@ -9,7 +9,6 @@ GitBook 提供的的默认样式可能不能满足您的视觉需求，Gitbook-E
 - 提供是否生成菜单序号配置;
 - 提供标题与版权信息设置。
 
-
 电脑上的效果
 
 ![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-pc.png)
@@ -17,6 +16,8 @@ GitBook 提供的的默认样式可能不能满足您的视觉需求，Gitbook-E
 手机上的效果
 
 ![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-m.png)
+
+预览效果 [http://f2edocs.com/](http://f2edocs.com/)
 
 ## 快速开始
 **安装GitBook**
