@@ -123,5 +123,12 @@ gitbook-ext -d
 gitbook build
 ```
 
+
+
+
 ## 谁在用
 [http://f2edocs.com/](http://f2edocs.com/)
+
+##问题
+
+如果需要帮助，可以联系[这里](https://github.com/simonguo/gitbook-ext/issues)
