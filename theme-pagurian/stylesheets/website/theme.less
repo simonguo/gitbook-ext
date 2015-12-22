@@ -33,7 +33,9 @@ body {
     .font-family-0 {
         font-family: inherit;
     }
-    .book-body {.page-wrapper.page-inner {section.normal img {
+    .book-body {
+        .page-wrapper.page-inner {
+            section.normal img {
                 max-width: none;
             }
         }
@@ -53,7 +55,8 @@ body {
     padding: 15px 18px;
     height: 50px;
 }
-@media (max-width: 640px) {.nav {
+@media (max-width: 640px) {
+    .nav {
         background: #f5f5f5 none repeat scroll 0 0;
         bottom: 0;
         height: 50px;
@@ -79,15 +82,20 @@ body {
         }
     }
 }
-@media (min-width: 1240px) {.page-inner {
+@media (min-width: 1240px) {
+    .page-inner {
         max-width: none !important;
         padding: 20px 90px !important;
     }
 }
-.theme-green {.header {
+.theme-green {
+    .header {
         background: #1b9451;
     }
-    .book {.book-summary {ul.summary {li.active > a,
+    .book {
+        .book-summary {
+            ul.summary {
+                li.active > a,
                 li a:hover {
                     color: #1b9451;
                 }
@@ -97,8 +105,7 @@ body {
     .nav > li.active {
         background: #188247 none repeat scroll 0 0;
     }
-
-    .btn-toggle-summary{
+    .btn-toggle-summary {
         color: #fff;
         float: left;
         height: 50px;
@@ -106,32 +113,41 @@ body {
         background: #188247;
     }
 }
-.theme-purple {.header {
+.theme-purple {
+    .header {
         background: #906;
     }
-    .book {.book-summary {ul.summary {li.active > a,
+    .book {
+        .book-summary {
+            ul.summary {
+                li.active > a,
                 li a:hover {
                     color: #906;
                 }
             }
+
         }
     }
     .nav > li.active {
         background: #860059 none repeat scroll 0 0;
     }
-
-    .btn-toggle-summary{
+    .btn-toggle-summary {
         color: #fff;
         float: left;
         height: 50px;
         padding: 15px 18px;
         background: #860059;
     }
+
 }
-.theme-orange {.header {
+.theme-orange {
+    .header {
         background: #ffad33;
     }
-    .book {.book-summary {ul.summary {li.active > a,
+    .book {
+        .book-summary {
+            ul.summary {
+                li.active > a,
                 li a:hover {
                     color: #ffad33;
                 }
@@ -141,8 +157,7 @@ body {
     .nav > li.active {
         background: #df972d none repeat scroll 0 0;
     }
-
-    .btn-toggle-summary{
+    .btn-toggle-summary {
         color: #fff;
         float: left;
         height: 50px;
@@ -150,12 +165,16 @@ body {
         background: #df972d;
     }
 }
-.theme-gray {.header {
+.theme-gray {
+    .header {
         background: #f0f0f0;
         border-bottom: 1px solid #d9d9d9;
         color: #555;
     }
-    .book {.book-summary {ul.summary {li.active > a,
+    .book {
+        .book-summary {
+            ul.summary {
+                li.active > a,
                 li a:hover {
                     color: #222;
                 }
@@ -168,8 +187,7 @@ body {
     .nav > li.active {
         background: #d9d9d9 none repeat scroll 0 0;
     }
-
-    .btn-toggle-summary{
+    .btn-toggle-summary {
         color: #999;
         float: left;
         height: 50px;
@@ -177,9 +195,46 @@ body {
         background: #e0e0e0;
     }
 }
+.theme-deepblue {
+    .header {
+        background: #2980b9;
+    }
+    .book {
+        bottom: 0;
+        .book-summary {
+            background: #343131;
+            color: #b3b3b3;
+            ul.summary {
+                span{
+                    color: #777;
+                }
+                li a {
+                    color: #b3b3b3;
+                }
+                li.active > a,
+                li a:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .nav > li.active {
+        background: #1f608b none repeat scroll 0 0;
+    }
+    .btn-toggle-summary {
+        color: #fff;
+        float: left;
+        height: 50px;
+        padding: 15px 18px;
+        background: #2980b9;
+    }
+    .footer {
+        display: none;
+    }
+}
 .buttons.color-theme-list {
     display: none;
 }
-.toggle-summary{
+.toggle-summary {
     display: none !important;
 }

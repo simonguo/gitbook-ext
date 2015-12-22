@@ -4150,6 +4150,39 @@ body {
   padding: 15px 18px;
   background: #e0e0e0;
 }
+.theme-deepblue .header {
+  background: #2980b9;
+}
+.theme-deepblue .book {
+  bottom: 0;
+}
+.theme-deepblue .book .book-summary {
+  background: #343131;
+  color: #b3b3b3;
+}
+.theme-deepblue .book .book-summary ul.summary span {
+  color: #b3b3b3;
+}
+.theme-deepblue .book .book-summary ul.summary li a {
+  color: #b3b3b3;
+}
+.theme-deepblue .book .book-summary ul.summary li.active > a,
+.theme-deepblue .book .book-summary ul.summary li a:hover {
+  color: #fff;
+}
+.theme-deepblue .nav > li.active {
+  background: #1f608b none repeat scroll 0 0;
+}
+.theme-deepblue .btn-toggle-summary {
+  color: #fff;
+  float: left;
+  height: 50px;
+  padding: 15px 18px;
+  background: #2980b9;
+}
+.theme-deepblue .footer {
+  display: none;
+}
 .buttons.color-theme-list {
   display: none;
 }
