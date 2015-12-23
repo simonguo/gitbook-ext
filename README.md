@@ -19,6 +19,11 @@ GitBook 提供的的默认样式可能不能满足您的视觉需求，Gitbook-E
 
 预览效果 [http://f2edocs.com/](http://f2edocs.com/)
 
+深蓝色主题效果
+
+![image](https://raw.githubusercontent.com/simonguo/gitbook-ext/master/demo-deepblue.png
+)
+
 ## 快速开始
 **安装GitBook**
 
