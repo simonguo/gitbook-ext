@@ -1,4 +1,7 @@
 # Gitbook-Ext
+
+迁移到:https://github.com/simonguo/hbook
+
 GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，GitBook 并非关于 Git 的教程。
 
 GitBook 提供的的默认样式可能不能满足您的视觉需求，Gitbook-Ext是对GitBook的扩展，并陆续会提供一些更丰富的模板选择。
